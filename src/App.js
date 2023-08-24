@@ -1,12 +1,12 @@
 import React from 'react';
-import { Counter } from './features/Counter/Counter';
 import './App.css';
+import Home from './pages/Home';
 
 function App() {
   return (
     <div className="App">
    
-        <Counter />    
+      <Home/>
           
     </div>
   );
