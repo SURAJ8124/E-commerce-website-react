@@ -1,13 +1,37 @@
 import React from 'react';
 import './App.css';
 import Home from './pages/Home';
+import LoginPage from './pages/LoginPage';
+import SignUpPage from './pages/SignUpPage';
+import * as ReactDOM from "react-dom/client";
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home/>,
+    },
+    {
+      path: "/login",
+      element: <LoginPage/>,
+    },
+    {
+      path: "/signup",
+      element: <SignUpPage/>,
+    },
+  ]);
   return (
     <div className="App">
-   
-      <Home/>
-          
+      {/* <LoginPage /> */}
+      {/*  */}
+      <React.StrictMode>
+        <RouterProvider router={router} />
+      </React.StrictMode>
+
     </div>
   );
 }
